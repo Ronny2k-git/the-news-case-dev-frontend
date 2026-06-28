@@ -104,11 +104,7 @@ export default function BottomNav() {
             to={path}
             className={`bottom-nav__item ${isActive ? "bottom-nav__item--active" : ""}`}
           >
-            {isActive && label === "edição" ? (
-              <div className="bottom-nav__active-bg">{icon}</div>
-            ) : (
-              icon
-            )}
+            {icon}
             <span>{label}</span>
           </Link>
         );
