@@ -1,0 +1,109 @@
+/* ── BASE BUTTON ── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+/* ── PRIMARY BUTTON ── */
+.btn--primary {
+  background: var(--yellow);
+  color: #000;
+  padding: 14px;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* ── SHARE ── */
+.btn--share {
+  background: var(--yellow);
+  color: #000;
+  padding: 13px;
+  font-size: 14px;
+  width: calc(100% - 36px);
+  margin: 18px 18px 0;
+}
+
+/* ── ICON BUTTON ── */
+.btn--icon {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--icon:active {
+  opacity: 0.6;
+}
+
+/* ── PLAY ── */
+.btn--play-main {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 154, 60, 0.35);
+  flex-shrink: 0;
+}
+
+.btn--play-main svg {
+  fill: #1a1100;
+}
+
+/* ── PLAY SMALL ── */
+.btn--play-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+/* ── ACTION CHIP (baixar/salvar/compartilhar no hero) ── */
+.action-chip {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.action-chip--saved {
+  color: var(--yellow);
+  border-color: rgba(255, 200, 50, 0.3);
+}

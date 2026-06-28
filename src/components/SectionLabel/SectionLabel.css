@@ -1,0 +1,44 @@
+/* ── SECTION LABEL ── */
+.section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px 20px 12px;
+}
+
+.section-label__title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.section-label__count {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* YELLOW VARIANT */
+.section-label--yellow .section-label__title {
+  color: var(--yellow);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+
+/* ── SECTION GROUP ── */
+.section-group {
+  padding: 20px 20px 0;
+}
+
+.section-group__title {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-group__list {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+/* DIVIDER BETWEEN SECTIONS */
+.mais-section-gap {
+  height: 8px;
+}
+
+/* YELLOW HEADER LINE */
+.mais-header-line {
+  height: 2px;
+  background: var(--accent-gradient);
+  margin: 0 20px;
+}

@@ -1,0 +1,101 @@
+/* ── HEADER ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.header__logo-dot {
+  width: 22px;
+  height: 22px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header__icons svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--text-muted);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+
+/* Notificações badge */
+.header__notif-wrap {
+  position: relative;
+}
+
+.header__notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  background: #e53935;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 1px 4px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* ── PAGE HEADER (Mais / Podcasts) ── */
+.page-header {
+  padding: 8px 20px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page-header__title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.page-header__subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.page-header__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #14b8a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #07211d;
+  flex-shrink: 0;
+}
