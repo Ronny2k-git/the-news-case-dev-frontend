@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import BottomNav from "../../components/BottomNav/BottomNav";
-import { MenuItem } from "../../components/Card/Card";
-import { sections } from "../../consts";
+import { MenuItem } from "../../components/Card/MenuItemCard";
+import { sections } from "../../consts/pages";
 import "./Mais.css";
 
 export default function Mais() {
@@ -36,7 +36,12 @@ export default function Mais() {
                     className="menu-item__icon"
                     style={{ background: item.bg }}
                   >
-                    {item.icon}
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      width={22}
+                      height={22}
+                    />
                   </div>
                 }
                 title={item.title}

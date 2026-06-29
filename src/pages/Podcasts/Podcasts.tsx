@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BottomNav from "../../components/BottomNav/BottomNav";
-import { EpisodeCard } from "../../components/Card/Card";
+import { EpisodeCard } from "../../components/Card/EpisodeCard";
 import SectionLabel from "../../components/SectionLabel/SectionLabel";
 import "./Podcasts.css";
 

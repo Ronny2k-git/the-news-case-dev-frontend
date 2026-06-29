@@ -26,6 +26,11 @@
   flex-shrink: 0;
 }
 
+.ep-item__cover img,
+.ep-item__action-btn img {
+  filter: invert(1);
+}
+
 .ep-item__body {
   flex: 1;
   min-width: 0;

@@ -3,28 +3,15 @@ import { useNavigate } from "react-router-dom";
 import BottomNav from "../../components/BottomNav/BottomNav";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
-import { articles, indexItems, tabs } from "../../consts";
+import { articles, indexItems, tabs } from "../../consts/pages";
 import "./Edicao.css";
+import { scrollToStory, shareStory } from "../../consts/utils";
 
 export default function Edicao() {
   const [activeTab, setActiveTab] = useState(0);
   const [progressVisible, setProgressVisible] = useState(true);
   const navigate = useNavigate();
   const articleRefs = useRef<Record<string, HTMLDivElement | null>>({});
-
-  function scrollToStory(id: string) {
-    articleRefs.current[id]?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-
-  function shareStory(heading: string) {
-    const text = encodeURIComponent(
-      `Leia no the news: "${heading}" — ${window.location.href}`,
-    );
-    window.open(`https://wa.me/?text=${text}`, "_blank");
-  }
 
   return (
     <div className="screen">
@@ -129,7 +116,7 @@ export default function Edicao() {
               href={`#${item.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToStory(item.id);
+                scrollToStory(item.id, articleRefs);
               }}
             >
               <span className="index-item__emoji">{item.emoji}</span>

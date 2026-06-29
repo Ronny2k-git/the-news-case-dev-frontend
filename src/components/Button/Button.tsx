@@ -1,7 +1,12 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import "./Button.css";
 
-type ButtonVariant = "primary" | "share" | "icon" | "play-main" | "play-small";
+export type ButtonVariant =
+  | "primary"
+  | "share"
+  | "icon"
+  | "play-main"
+  | "play-small";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;

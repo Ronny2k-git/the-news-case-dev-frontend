@@ -46,26 +46,6 @@
   cursor: pointer;
 }
 
-/* Notificações badge */
-.header__notif-wrap {
-  position: relative;
-}
-
-.header__notif-badge {
-  position: absolute;
-  top: -5px;
-  right: -6px;
-  background: #e53935;
-  color: white;
-  font-size: 9px;
-  font-weight: 700;
-  border-radius: 10px;
-  padding: 1px 4px;
-  min-width: 16px;
-  text-align: center;
-}
-
-/* ── PAGE HEADER (Mais / Podcasts) ── */
 .page-header {
   padding: 8px 20px 20px;
   border-bottom: 1px solid var(--border);
