@@ -1,75 +1,69 @@
-# React + TypeScript + Vite
+# the news — Redesign (Case Dev Front-end & Design)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Protótipo em React de 3 telas redesenhadas do app **the news**, feito como parte do processo seletivo de Dev Front-end & Design.
 
-Currently, two official plugins are available:
+🔗 **Acessar online:** [the-news-redesign.vercel.app](https://the-news-redesign.vercel.app)
+📄 **Documento de decisões:** ver link enviado no formulário do case
+🎨 **Figma:** ver link enviado no formulário do case
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## O que tem nesse projeto
 
-## React Compiler
+Três telas do app foram redesenhadas:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Edição** — o índice "Na edição de hoje" agora é clicável (leva direto até a notícia) e cada matéria tem um botão de destaque para compartilhar no WhatsApp.
+- **Podcasts** — episódio do dia em destaque, episódios anteriores agrupados por período (em vez de lista infinita), e o player não depende mais do Spotify.
+- **Menu "Mais"** — reorganizado em categorias com critério (Para você, Conteúdo, Social & Diversão, Conta, Entre em Contato), em vez de uma lista única sem nenhum agrupamento.
 
-## Expanding the ESLint configuration
+## Tecnologias usadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) (builda e roda o projeto)
+- [React Router](https://reactrouter.com/) (navegação entre as telas)
+- CSS puro, sem framework.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Como rodar o projeto no seu computador
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Você vai precisar ter o **Node.js** instalado antes (versão 18 ou mais recente). Para checar se já tem, abra o terminal e digite:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+node -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Se não tiver, baixe em [nodejs.org](https://nodejs.org/) (escolha a versão "LTS").
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Passo a passo
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**1. Baixe o projeto**
+
+Se você tem o Git instalado:
+
+```bash
+git clone <link-do-repositorio>
+cd the-news-redesign
+```
+
+Ou, se preferir, baixe o ZIP do repositório e extraia numa pasta.
+
+**2. Instale as dependências**
+
+Dentro da pasta do projeto, rode:
+
+```bash
+npm install
+```
+
+Isso baixa todas as bibliotecas que o projeto precisa (pode levar 1-2 minutos).
+
+**3. Rode o projeto**
+
+```bash
+npm run dev
+```
+
+O terminal vai mostrar um endereço, geralmente:
 
 ```
+Local: http://localhost:5173
+```
+
+Abra esse endereço no navegador e o projeto vai aparecer funcionando.

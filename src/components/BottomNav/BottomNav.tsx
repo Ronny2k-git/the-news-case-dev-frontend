@@ -8,12 +8,12 @@ export default function BottomNav() {
 
   return (
     <nav className="bottom-nav">
-      {navItems.map(({ path, label, icon }) => {
+      {navItems.map(({ path, label, icon }, i) => {
         const isActive = pathname === path;
 
         return (
           <Link
-            key={path}
+            key={`${path}_${i}`}
             to={path}
             className={`bottom-nav__item ${isActive ? "bottom-nav__item--active" : ""}`}
           >

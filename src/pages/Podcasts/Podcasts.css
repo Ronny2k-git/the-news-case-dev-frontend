@@ -1,12 +1,60 @@
+/* ── TABS ── */
+
+.episode-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.episode-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.episode-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.episode-tab:hover {
+  border-color: var(--text-muted);
+}
+
+.episode-tab--active {
+  background: rgba(255, 200, 50, 0.12);
+  border-color: #ffc832;
+  color: #ffc832;
+}
+
+.episode-tab__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 /* ── SEARCH BAR ── */
 .search-wrap {
   padding: 16px 20px 4px;
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -16,6 +64,11 @@
   font-family: inherit;
   width: 100%;
   cursor: text;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #eab308;
 }
 
 .search-bar svg {

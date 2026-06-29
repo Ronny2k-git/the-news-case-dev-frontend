@@ -4,8 +4,8 @@ import BottomNav from "../../components/BottomNav/BottomNav";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import { articles, indexItems, tabs } from "../../consts/pages";
-import "./Edicao.css";
 import { scrollToStory, shareStory } from "../../consts/utils";
+import "./Edicao.css";
 
 export default function Edicao() {
   const [activeTab, setActiveTab] = useState(0);
@@ -32,7 +32,7 @@ export default function Edicao() {
       </div>
 
       {/* Progress bar */}
-      {progressVisible && (
+      {progressVisible ? (
         <div className="progress-bar">
           <div className="progress-bar__stat">
             <svg
@@ -65,9 +65,12 @@ export default function Edicao() {
             </svg>
             Tempo <strong>2m 42s</strong>
           </div>
+
+          {/* Progress Bar */}
           <div className="progress-bar__track">
             <div className="progress-bar__fill" style={{ width: "100%" }} />
           </div>
+
           <button
             className="progress-bar__toggle"
             onClick={() => setProgressVisible(false)}
@@ -85,6 +88,29 @@ export default function Edicao() {
             </svg>
           </button>
         </div>
+      ) : (
+        <div className="progress-bar progress-bar--collapsed">
+          <div className="progress-bar__track">
+            <div className="progress-bar__fill" style={{ width: "100%" }} />
+          </div>
+
+          <button
+            className="progress-bar__toggle"
+            onClick={() => setProgressVisible(true)}
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+        </div>
       )}
 
       {/* Hero */}
@@ -94,11 +120,11 @@ export default function Edicao() {
           <span className="sponsor__name">Revolut</span>
         </div>
         <div style={{ marginTop: 22 }}>
-          <div className="hero-section__title">brilho no olhar</div>
+          <div className="hero-section__title">Brilho no olhar</div>
           <p className="hero-section__intro">
-            bom dia. às vezes, achamos que maturidade é aprender a empregar
+            Bom dia. às vezes, achamos que maturidade é aprender a empregar
             menos. mas o brilho no olhar geralmente é um sinal de que a rota
-            está ajustada. que esta sexta seja de luz.
+            está ajustada. que este dia seja de luz.
           </p>
         </div>
       </div>
@@ -106,8 +132,9 @@ export default function Edicao() {
       {/* Index — na edição de hoje */}
       <div className="index-section">
         <div className="index-label section-label--yellow">
-          na edição de hoje
+          Na edição de hoje
         </div>
+
         <div className="index-card">
           {indexItems.map((item) => (
             <a
@@ -183,6 +210,7 @@ export default function Edicao() {
             <div className="article-anchor__tag">{article.tag}</div>
             <div className="article-anchor__heading">{article.heading}</div>
             <p className="article-anchor__body">{article.body}</p>
+
             <Button variant="share" onClick={() => shareStory(article.heading)}>
               <svg
                 width="16"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { headerIcons } from "../../consts/components";
 import "./Header.css";
 
@@ -10,8 +11,16 @@ export default function Header() {
       </a>
 
       <div className="header__icons">
-        {headerIcons.map((icon) => (
-          <img src={icon.path} alt={icon.path} width={22} height={22} />
+        {headerIcons.map((icon, i) => (
+          <Link key={`${icon.path}_${i}`} to={icon.path!}>
+            <img
+              key={i}
+              src={icon.imagePath}
+              alt={icon.path}
+              width={22}
+              height={22}
+            />
+          </Link>
         ))}
       </div>
     </header>
